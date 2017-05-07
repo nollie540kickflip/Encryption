@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:encryption"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="暗号・複合ツール" Height="190" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label Height="24" Width="70" Margin="20,15,0,10" Content="複合ファイル" />
+            <TextBox x:Name="txtFuku" Height="24" Width="350" Margin="10,15,0,10" PreviewDragOver="txtFuku_PreviewDragOver" Drop="txtFuku_Drop" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Label Height="24" Width="70" Margin="20,10,0,10" Content="暗号ファイル" />
+            <TextBox x:Name="txtAngo" Height="24" Width="350" Margin="10,10,0,10" PreviewDragOver="txtAngo_PreviewDragOver" Drop="txtAngo_Drop" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="btnFuku" Height="24" Width="50" Margin="20,15,0,10" Content="複合" Click="btnFuku_Click" />
+            <Button x:Name="btnAngo" Height="24" Width="50" Margin="20,15,0,10" Content="暗号" Click="btnAngo_Click" />
+        </StackPanel>
     </Grid>
 </Window>
